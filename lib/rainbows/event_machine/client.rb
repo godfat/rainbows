@@ -28,7 +28,7 @@ class Rainbows::EventMachine::Client < EM::Connection
 
   def quit
     super
-    close_connection_after_writing
+    close_connection_after_writing if nil == @deferred
   end
 
   def app_call input
