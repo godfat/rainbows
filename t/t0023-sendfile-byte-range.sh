@@ -10,7 +10,7 @@ ruby) ;;
 	;;
 esac
 
-skip_models EventMachine NeverBlock
+skip_models EventMachine EventMachineThreadSpawn NeverBlock
 
 t_plan 13 "sendfile byte range response for $model"
 
