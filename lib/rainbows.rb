@@ -111,6 +111,7 @@ module Rainbows
   autoload :Epoll, "rainbows/epoll"
   autoload :XEpoll, "rainbows/xepoll"
   autoload :EventMachine, "rainbows/event_machine"
+  autoload :EventMachineThreadSpawn, "rainbows/event_machine_thread_spawn"
   autoload :FiberSpawn, "rainbows/fiber_spawn"
   autoload :FiberPool, "rainbows/fiber_pool"
   autoload :ActorSpawn, "rainbows/actor_spawn"

@@ -37,6 +37,10 @@ class Rainbows::EventMachine::Client < EM::Connection
     @env[REMOTE_ADDR] = @_io.kgio_addr
     @env[ASYNC_CALLBACK] = method(:write_async_response)
     @env[ASYNC_CLOSE] = EM::DefaultDeferrable.new
+    app_dispatch
+  end
+
+  def app_dispatch
     status, headers, body = catch(:async) {
       APP.call(@env.merge!(RACK_DEFAULTS))
     }

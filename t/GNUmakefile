@@ -31,6 +31,7 @@ models += ThreadPool
 models += ThreadSpawn
 models += Coolio
 models += EventMachine
+models += EventMachineThreadSpawn
 models += NeverBlock
 models += StreamResponseEpoll
 

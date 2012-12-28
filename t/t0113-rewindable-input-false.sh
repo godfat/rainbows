@@ -1,6 +1,6 @@
 #!/bin/sh
 . ./test-lib.sh
-skip_models EventMachine NeverBlock
+skip_models EventMachine EventMachineThreadSpawn NeverBlock
 skip_models Rev RevThreadSpawn RevThreadPool
 skip_models Coolio CoolioThreadSpawn CoolioThreadPool
 skip_models Epoll XEpoll
