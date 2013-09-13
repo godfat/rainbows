@@ -2,6 +2,7 @@
 . ./test-lib.sh
 
 case $model in
+EventMachineThreadDefer|EventMachineThreadPool|\
 NeverBlock|CoolioThreadPool|XEpollThreadPool) ;;
 *)
 	t_info "skipping $model.$T since it doesn't support :pool_size"

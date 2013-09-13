@@ -47,6 +47,7 @@ module Rainbows::EventMachine
   autoload :ResponseChunkPipe, 'rainbows/event_machine/response_chunk_pipe'
   autoload :TryDefer, 'rainbows/event_machine/try_defer'
   autoload :Client, 'rainbows/event_machine/client'
+  autoload :ThreadClient, 'rainbows/event_machine/thread_client'
 
   include Rainbows::Base
 

@@ -45,14 +45,11 @@ ifeq ($(RUBY_ENGINE),ruby)
     models += CoolioThreadPool
     models += CoolioThreadSpawn
     models += CoolioFiberSpawn
-
-    # EventMachine 1.0.0 currently does not build on Ruby 2.0.0
-    # NeverBlock depends on 2.0.0
-    RBTWO := $(shell case $(RUBY_VERSION) in 2.0.*$(rp) echo true;;esac)
-    ifeq ($(RBTWO),)
-      models += EventMachine
-      models += NeverBlock
-    endif
+    models += EventMachine
+    models += EventMachineThreadDefer
+    models += EventMachineThreadPool
+    models += EventMachineThreadSpawn
+    models += NeverBlock
   endif
 endif
 

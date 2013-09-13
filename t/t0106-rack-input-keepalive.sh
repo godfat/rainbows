@@ -1,6 +1,8 @@
 #!/bin/sh
 . ./test-lib.sh
 skip_models StreamResponseEpoll
+skip_models EventMachineThreadDefer EventMachineThreadPool
+skip_models EventMachineThreadSpawn
 t_plan 11 "rack.input pipelining test"
 
 t_begin "setup and startup" && {
